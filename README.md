@@ -15,7 +15,7 @@
 [ ] - Interfaces
 [ ] - Generics
 [ ] - Decorators
-[ ] - Using librarys JS with typscript
+[x] - Using librarys JS with typscript
 [ ] - Integration typescript + gulp
 [ ] - Integration typescript + webpack
 [ ] - Integration typescript + react

@@ -1,2 +1,2 @@
-const a: string = "Testing... Typescript";
-console.log(a);
+const testing: string = "Testing... Typescript";
+console.log(testing);

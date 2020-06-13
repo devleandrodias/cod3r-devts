@@ -13,7 +13,7 @@
 - [ ] Using class to create objects
 - [ ] Modules and namespaces
 - [ ] Interfaces
-- [ ] Generics
+- [-] Generics
 - [ ] Decorators
 - [x] Using librarys JS with typscript
 - [ ] Integration typescript + gulp

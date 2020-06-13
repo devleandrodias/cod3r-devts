@@ -39,14 +39,28 @@ console.log(carro);
 function returnMyName(name) {
     return "My name is " + name;
 }
-function multiplicar(x, y) {
+function times(x, y) {
     return x * y;
 }
-function somar(x, y) {
+function sum(x, y) {
     return x + y;
 }
 var calc;
-calc = multiplicar;
+calc = times;
 console.log(calc(10, 5));
-calc = somar;
+calc = sum;
 console.log(calc(10, 5));
+// types for object
+var usuario = {
+    name: "Leandro",
+    age: 19
+};
+usuario = { name: "Thaísa", age: 20 };
+var funcionario;
+funcionario = {
+    supervisore: ["João", "Carlos", "Algusto"],
+    baterPonto: function (horario) {
+        return horario <= 8 ? "Ponto normal" : "Fora do horário";
+    }
+};
+console.log(funcionario.baterPonto(7.2));

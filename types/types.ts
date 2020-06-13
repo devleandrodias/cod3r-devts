@@ -57,18 +57,61 @@ function returnMyName(name: string): string {
   return `My name is ${name}`;
 }
 
-function multiplicar(x: number, y: number): number {
+function times(x: number, y: number): number {
   return x * y;
 }
 
-function somar(x: number, y: number): number {
+function sum(x: number, y: number): number {
   return x + y;
 }
 
 let calc: (x: number, y: number) => number;
 
-calc = multiplicar;
+calc = times;
 console.log(calc(10, 5));
 
-calc = somar;
+calc = sum;
 console.log(calc(10, 5));
+
+// types for object
+
+let user: { name: string; age: number } = {
+  name: "Leandro",
+  age: 19,
+};
+
+user = { name: "Thaísa", age: 20 };
+
+const beatDot = (time: number) =>
+  time <= 8 ? "Ponto normal" : "Fora do horário";
+
+type Collaborator = {
+  supervisors: string[];
+  beatDot: (hora: number) => string;
+};
+
+let collaboratorBeatriz: Collaborator = {
+  supervisors: ["João", "Carlos", "Algusto"],
+  beatDot(horario: number): string {
+    return beatDot(horario);
+  },
+};
+
+let collaboratorCarlos: Collaborator = {
+  supervisors: ["Ana", "Algusto"],
+  beatDot(horario: number): string {
+    return beatDot(horario);
+  },
+};
+
+console.log(collaboratorBeatriz.beatDot(7.2));
+console.log(collaboratorCarlos.beatDot(7.2));
+
+// union types
+
+let note: number | string = 10;
+
+console.log(`My note is ${note}`);
+
+note = "10";
+console.log(`My note is ${note}`);

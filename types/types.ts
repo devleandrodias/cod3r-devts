@@ -149,3 +149,13 @@ const product: ProductType = {
 
 // product.valid();
 
+// value optional null
+
+let car: null | string = "Toyta";
+
+car = null;
+
+type CellphoneCollaborator = {
+  cellphone: number;
+  cellphone2: number | null;
+};

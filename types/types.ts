@@ -50,3 +50,25 @@ console.log(carro);
 
 carro = { marca: "BMW", ano: 2020 };
 console.log(carro);
+
+// type for functions
+
+function returnMyName(name: string): string {
+  return `My name is ${name}`;
+}
+
+function multiplicar(x: number, y: number): number {
+  return x * y;
+}
+
+function somar(x: number, y: number): number {
+  return x + y;
+}
+
+let calc: (x: number, y: number) => number;
+
+calc = multiplicar;
+console.log(calc(10, 5));
+
+calc = somar;
+console.log(calc(10, 5));

@@ -51,16 +51,49 @@ console.log(calc(10, 5));
 calc = sum;
 console.log(calc(10, 5));
 // types for object
-var usuario = {
+var user = {
     name: "Leandro",
     age: 19
 };
-usuario = { name: "Thaísa", age: 20 };
-var funcionario;
-funcionario = {
-    supervisore: ["João", "Carlos", "Algusto"],
-    baterPonto: function (horario) {
-        return horario <= 8 ? "Ponto normal" : "Fora do horário";
+user = { name: "Thaísa", age: 20 };
+var beatDot = function (time) {
+    return time <= 8 ? "Ponto normal" : "Fora do horário";
+};
+var collaboratorBeatriz = {
+    supervisors: ["João", "Carlos", "Algusto"],
+    beatDot: function (horario) {
+        return beatDot(horario);
     }
 };
-console.log(funcionario.baterPonto(7.2));
+var collaboratorCarlos = {
+    supervisors: ["Ana", "Algusto"],
+    beatDot: function (horario) {
+        return beatDot(horario);
+    }
+};
+console.log(collaboratorBeatriz.beatDot(7.2));
+console.log(collaboratorCarlos.beatDot(7.2));
+// union types
+var note = 10;
+console.log("My note is " + note);
+note = "10";
+console.log("My note is " + note);
+// check types
+var value = 30;
+typeof value == "number" ? "isNumber" : "noNumber";
+// type never
+function getHello() {
+    console.log("Hello");
+}
+function error(msg) {
+    throw new Error(msg);
+}
+var product = {
+    name: "MacBook Air 2018",
+    price: -2002.31,
+    valid: function () {
+        this.name.trim().length === 0 && error("Name invalid");
+        this.price < 0 && error("Prince invalid");
+    }
+};
+product.valid();

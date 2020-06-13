@@ -115,3 +115,37 @@ console.log(`My note is ${note}`);
 
 note = "10";
 console.log(`My note is ${note}`);
+
+// check types
+
+let value = 30;
+
+typeof value == "number" ? "isNumber" : "noNumber";
+
+// type never
+
+function getHello(): void {
+  console.log("Hello");
+}
+
+function error(msg: string): never {
+  throw new Error(msg);
+}
+
+type ProductType = {
+  name: string;
+  price: number;
+  valid(): void;
+};
+
+const product: ProductType = {
+  name: "MacBook Air 2018",
+  price: -2002.31,
+  valid() {
+    this.name.trim().length === 0 && error("Name invalid");
+    this.price < 0 && error("Prince invalid");
+  },
+};
+
+// product.valid();
+

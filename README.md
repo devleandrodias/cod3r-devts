@@ -7,7 +7,7 @@
 > Modules course
 
 - [x] Introduction
-- [ ] Using types
+- [x] Using types
 - [ ] Understanding the typescript compiler
 - [ ] Typescript and new resources ECMAScript
 - [ ] Using class to create objects

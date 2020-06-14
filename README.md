@@ -13,7 +13,7 @@
 - [ ] Using class to create objects
 - [ ] Modules and namespaces
 - [ ] Interfaces
-- [-] Generics
+- [x] Generics
 - [ ] Decorators
 - [x] Using librarys JS with typscript
 - [ ] Integration typescript + gulp
@@ -21,7 +21,3 @@
 - [ ] Integration typescript + react
 - [ ] Integration typescript + vue
 - [ ] Conclusion
-
-> Next class
-
-- Session 2 - Assigning explicit types

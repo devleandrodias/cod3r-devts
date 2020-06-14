@@ -36,3 +36,11 @@ genericPrint<{ name: string; age: number }>([
   { name: 'Leandro', age: 20 },
   { name: 'Thaísa', age: 20 },
 ]);
+
+// type function generic
+
+type CallEcho = <T>(data: T) => T;
+
+const callEcho: CallEcho = genericEcho;
+
+console.log(callEcho<string>('Generic'));

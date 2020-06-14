@@ -25,3 +25,5 @@ genericPrint([
     { name: 'Leandro', age: 20 },
     { name: 'Thaísa', age: 20 },
 ]);
+var callEcho = genericEcho;
+console.log(callEcho('Generic'));

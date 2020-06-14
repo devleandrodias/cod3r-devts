@@ -44,3 +44,36 @@ type CallEcho = <T>(data: T) => T;
 const callEcho: CallEcho = genericEcho;
 
 console.log(callEcho<string>('Generic'));
+
+// class generic
+
+abstract class OperationBinary<T, R> {
+  constructor(public op1: T, public ap2: T) {}
+
+  abstract execute(): R;
+}
+
+// console.log(new OperationBinary('Bom', 'Dia').execute());
+// console.log(new OperationBinary(3, 7).execute());
+// console.log(new OperationBinary(3, 'Batman').execute());
+// console.log(new OperationBinary({}, {}).execute());
+
+class SumBinary extends OperationBinary<number, number> {
+  execute(): number {
+    return this.op1 + this.ap2;
+  }
+}
+
+console.log(new SumBinary(3, 4).execute());
+
+class DiffDates extends OperationBinary<Date, string> {
+  getTime(data: Date): number {
+    let { getDay, getMonth, getFullYear } = data;
+
+    return new Date(`${getMonth()}/${getDay()}/${getFullYear()}`).getTime();
+  }
+
+  execute(): string {
+    return '';
+  }
+}
